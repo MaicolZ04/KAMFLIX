@@ -1,0 +1,442 @@
+:root {
+	--azul: #0a1dca;
+	--fondo: #03020c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(3,2,12);
+	font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px; /* Espaciado interno */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+}
+
+  
+  .navbar-container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: white;
+	font-family: "Sen", sans-serif;
+  }
+  
+  .logo-container {
+    flex: 1; /* Ajusta el espacio que ocupa el logo */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    z-index: 10; /* Asegúrate de que el logo esté por encima del menú */
+}
+  
+  .logo {
+	font-size: 30px;
+	color: var(--azul);
+	cursor: pointer;
+	text-decoration: none;
+	padding-left: 10px;
+  }
+  
+  .menu-container {
+    flex: 1; /* Permite que el contenedor del menú ocupe el espacio disponible */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    display: flex; /* Asegúrate de que el contenedor del menú sea un flexbox */
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    
+}
+
+.menu-list-item {
+    margin-right: 50px; /* Espaciado entre los elementos del menú */
+}
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Necesario para el contexto de posicionamiento */
+}
+
+.logo-container {
+    flex: 1; /* Ajusta el espacio que ocupa el logo */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    z-index: 10; /* Asegúrate de que el logo esté por encima del menú */
+}
+
+.menu-container {
+    flex: 1; /* Permite que el contenedor del menú ocupe el espacio disponible */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    display: flex; /* Asegúrate de que el contenedor del menú sea un flexbox */
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+	background-color: #000;
+}
+
+.menu-list {
+    display: flex; /* Muestra el menú como un flexbox */
+    list-style: none;
+    padding: 0 0 0 200px; /* Elimina el padding por defecto */
+    margin: 0 0 0 150px; /* Elimina el margin por defecto */
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list-item {
+    margin-right: 100px; /* Espaciado entre los elementos del menú */
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        flex-direction: column; /* Cambiar a columna para el menú desplegable */
+        position: absolute; /* Posicionar el menú */
+        top: 50px; /* Ajustar según la altura de la navbar */
+        left: 0;
+        background-color: black; /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 1; /* Asegúrate de que esté detrás del logo */
+    }
+
+    .menu-list.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú en pantallas pequeñas */
+        color: white; /* Color del botón */
+        font-size: 24px; /* Tamaño del icono */
+        z-index: 10; /* Asegúrate de que el botón esté por encima del menú */
+    }
+
+    .profile-container{
+        display: none;
+        margin-left: 100px;
+    }
+}
+
+  .menu-list a {
+	text-decoration: none;
+	color: #fff;
+    white-space: nowrap;
+    align-items: center;
+  }
+  
+  .menu-list a:hover {
+	color: #777777;
+	transition: 0.2s;
+  }
+  
+  .menu-list-item.active {
+	font-weight: lighter;
+  }
+
+  .activo {
+	font-weight: bold;
+  }
+
+  .profile-container {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	cursor: pointer;
+  }
+  
+  .profile-text-container {
+	margin: 0 20px;
+  }
+  
+  .profile-picture {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+
+header {
+	padding: 30px 0;
+	z-index: 200;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.45rem 2rem 0.45rem 1.27rem;
+	border-bottom: 1px solid var(--fondo);
+	position: fixed;
+	background-color: var(--fondo);
+	top: 0;
+	left: 0;
+}
+
+header.left {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	gap: 1.4rem;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--azul);
+	font-size: 40px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+	font-size: 15px;
+}
+
+header nav a:hover {
+	color: #777777;
+	transition: 0.2s;
+}
+
+header nav a.activo {
+	font-weight: bold;
+	color: #0a1dca;
+}
+
+body{
+  background-color: #000000;
+  margin: 40px 40px ;
+  color: #fff; 
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 60px;
+}
+
+.imagen-contenido{
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: -250px;
+}
+
+#titulo{
+    font-size: 60px;
+}
+
+.video-section{
+    margin-right: 50px;
+    margin-top: 280px;
+}
+
+.contenido-relacionado{
+    margin-top: 280px;
+}
+
+.titulo-recomendadas {
+  color: #fff; /* Color del texto */
+  font-size: 24px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  text-align: center; /* Centrar el texto */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  grid-column: span 3; /* Asegura que el título ocupe el ancho completo de la cuadrícula */
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+}
+
+.banner-peli {
+    margin-right: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.texto {
+    margin-top: -250px;
+}
+
+.texto .titulo{
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.texto .info{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-trailer button {
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    color: black; 
+    border: none; 
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.main-container {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    align-items: flex-start; /* Alinear al inicio verticalmente */
+    margin-top: 70px; /* Espacio superior para separar del contenido anterior */
+}
+
+.video-section {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    height: 500px; /* Ajusta la altura según sea necesario */
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    border: 1px solid #fff; /* Borde delgado y sólido */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.grid-container {
+    display: grid; /* Usar grid para el diseño */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(4, 150px); /* 4 filas de 150px de altura */
+    gap: 10px; /* Espacio entre las celdas */
+    margin-left: 20px; /* Espacio a la izquierda para separar del video */
+    width: 50%; /* Ajusta el ancho según sea necesario */
+}
+
+.movie {
+    border: 1px solid #fff; /* Borde sólido blanco */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para las películas */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: #fff; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    height: 100%; /* Asegura que ocupe toda la altura de la celda */
+}
+
+.footer {
+    background-color: var(--fondo);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.contenido-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+	justify-content: center;
+	text-align: center;
+}
+
+.contenido-footer h3 {
+    color: var(--azul);
+    margin-bottom: 1rem;
+}
+
+.contenido-footer p {
+    color: white;
+}
+
+.contenido-footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.contenido-footer a:hover {
+	text-decoration:underline;
+}
+
+.info-final {
+	font-size: 0.5rem;
+	font-style: italic;
+	font-weight: lighter;
+	text-align: center;
+	color: #ffffff;
+}
+
+.seccion-footer {
+	text-decoration: none;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Menor tamaño mínimo para tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Tamaño mínimo aún menor para teléfonos */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para tabletas */
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr); /* Cuatro columnas para pantallas más grandes */
+    }
+}
+
+/* Media Queries para Responsividad de Títulos */
+@media (max-width: 768px) {
+    .titulo-pd {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-pd {
+        font-size: 1.2rem; /* Tamaño de fuente aún más pequeño para teléfonos */
+    }
+}
+
+@media (max-width: 768px) {
+    .carrusel {
+        height: 300px; /* Altura menor para dispositivos móviles */
+        padding: 30px 0; /* Aumentar el espacio arriba y abajo en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel {
+        height: 200px; /* Altura aún menor para teléfonos */
+        padding: 40px 0; /* Aumentar el espacio arriba y abajo en teléfonos */
+    }
+
+}

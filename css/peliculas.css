@@ -1,0 +1,472 @@
+:root {
+	--azul: #0a1dca;
+	--fondo: #03020c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(3,2,12);
+	font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px; /* Espaciado interno */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+}
+
+  
+  .navbar-container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: white;
+	font-family: "Sen", sans-serif;
+  }
+  
+  .logo-container {
+    flex: 1; /* Ajusta el espacio que ocupa el logo */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    z-index: 10; /* Asegúrate de que el logo esté por encima del menú */
+}
+  
+  .logo {
+	font-size: 30px;
+	color: var(--azul);
+	cursor: pointer;
+	text-decoration: none;
+	padding-left: 10px;
+  }
+  
+  .menu-container {
+    flex: 1; /* Permite que el contenedor del menú ocupe el espacio disponible */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    display: flex; /* Asegúrate de que el contenedor del menú sea un flexbox */
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    
+}
+
+.menu-list-item {
+    margin-right: 50px; /* Espaciado entre los elementos del menú */
+}
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Necesario para el contexto de posicionamiento */
+}
+
+.logo-container {
+    flex: 1; /* Ajusta el espacio que ocupa el logo */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    z-index: 10; /* Asegúrate de que el logo esté por encima del menú */
+}
+
+.menu-container {
+    flex: 1; /* Permite que el contenedor del menú ocupe el espacio disponible */
+    position: relative; /* Necesario para el contexto de posicionamiento */
+    display: flex; /* Asegúrate de que el contenedor del menú sea un flexbox */
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+	background-color: #000;
+}
+
+.menu-list {
+    display: flex; /* Muestra el menú como un flexbox */
+    list-style: none;
+    padding: 0 0 0 200px; /* Elimina el padding por defecto */
+    margin: 0 0 0 150px; /* Elimina el margin por defecto */
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list-item {
+    margin-right: 100px; /* Espaciado entre los elementos del menú */
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    cursor: pointer;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        flex-direction: column; /* Cambiar a columna para el menú desplegable */
+        position: absolute; /* Posicionar el menú */
+        top: 50px; /* Ajustar según la altura de la navbar */
+        left: 0;
+        background-color: black; /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 1; /* Asegúrate de que esté detrás del logo */
+    }
+
+    .menu-list.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú en pantallas pequeñas */
+        color: white; /* Color del botón */
+        font-size: 24px; /* Tamaño del icono */
+        z-index: 10; /* Asegúrate de que el botón esté por encima del menú */
+    }
+
+    .profile-container{
+        display: none;
+        margin-left: 100px;
+    }
+}
+
+  .menu-list a {
+	text-decoration: none;
+	color: #fff;
+    white-space: nowrap;
+    align-items: center;
+  }
+  
+  .menu-list a:hover {
+	color: #777777;
+	transition: 0.2s;
+  }
+  
+  .menu-list-item.active {
+	font-weight: lighter;
+  }
+
+  .activo {
+	font-weight: bold;
+  }
+
+  .profile-container {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	cursor: pointer;
+  }
+  
+  .profile-text-container {
+	margin: 0 20px;
+  }
+  
+  .profile-picture {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+
+header {
+	padding: 30px 0;
+	z-index: 200;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.45rem 2rem 0.45rem 1.27rem;
+	border-bottom: 1px solid var(--fondo);
+	position: fixed;
+	background-color: var(--fondo);
+	top: 0;
+	left: 0;
+}
+
+header.left {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	gap: 1.4rem;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--azul);
+	font-size: 40px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+	font-size: 15px;
+}
+
+header nav a:hover {
+	color: #777777;
+	transition: 0.2s;
+}
+
+header nav a.activo {
+	font-weight: bold;
+	color: #0a1dca;
+}
+
+/* BARRA DE BUSQUEDA */
+
+.barra-busqueda {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.barra-busqueda input {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255,255, .3);
+    color: #fff;
+    margin-right: 10px;
+}
+
+.barra-busqueda input::placeholder {
+    color: #fff;
+}
+
+.barra-busqueda {
+    margin: 20px;
+}
+
+.resultado-busqueda {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.resultado-pelicula {
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 200px; /* Ancho de las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.resultado-pelicula img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.resultado-pelicula h3 {
+    margin: 10px; /* Margen para el título */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.resultado-pelicula p {
+    margin: 5px 10px; /* Margen para la descripción y otros textos */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+
+.titulo-pd {
+    text-align: center;
+    margin: 10px 0;
+	color: #ffffff;
+	overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+.grid-container {
+    display: grid; /* Usar grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crear columnas responsivas */
+    gap: 20px; /* Espacio entre los elementos */
+    margin-top: 40px; /* Espacio superior para separar del carrusel */
+    padding: 10px; /* Espacio interno */
+	color: #ffffff;
+	text-overflow: ellipsis;
+	font-size: 1.2rem;
+}
+
+.grid-container img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.grid-item {
+    position: relative; /* Necesario para posicionar el overlay */
+    overflow: hidden; /* Oculta el desbordamiento */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.2s; /* Transición suave para el efecto de zoom */
+}
+.grid-item:hover {
+    transform: scale(1.05);
+  }
+
+.grid-item:hover img {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+.info-overlay {
+    position: absolute; /* Posiciona el overlay sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+    text-align: center; /* Centra el texto */
+}
+
+.grid-item:hover .info-overlay {
+    opacity: 1; /* Muestra el overlay al pasar el cursor */
+}
+
+.info-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+.info-overlay p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .info-overlay .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .info-overlay .rating .stars {
+    font-size: 18px;
+    color: #ffd700;
+    margin-right: 10px;
+  }
+
+  .info-overlay .rating .score {
+    font-size: 16px;
+    color: white;
+  }
+
+  .info-overlay .play-button {
+    background-color: #0a1dca;
+    color: white;
+    border: none;
+    width: 20%;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .info-overlay .play-button:hover {
+    background-color: #0a1dca;
+    color: white;
+  }
+
+.footer {
+    background-color: var(--fondo);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.contenido-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+	justify-content: center;
+	text-align: center;
+}
+
+.contenido-footer h3 {
+    color: var(--azul);
+    margin-bottom: 1rem;
+}
+
+.contenido-footer p {
+    color: white;
+}
+
+.contenido-footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.contenido-footer a:hover {
+	text-decoration:underline;
+}
+
+.info-final {
+	font-size: 0.5rem;
+	font-style: italic;
+	font-weight: lighter;
+	text-align: center;
+	color: #ffffff;
+}
+
+.seccion-footer {
+	text-decoration: none;
+}
+
+/* Media Queries para Responsividad de Títulos */
+@media (max-width: 768px) {
+    .titulo-pd {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-pd {
+        font-size: 1.2rem; /* Tamaño de fuente aún más pequeño para teléfonos */
+    }
+}
+
+@media (forced-colors: active) {
+    body {
+        background-color: Window;
+        color: WindowText;
+    }
+    a {
+        color: Highlight;
+    }
+}

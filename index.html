@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="/imagenes/logokamflix.png">
+    <title>KAMFLIX</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Botón de menú -->
+                <div class="logo-container">
+                    <h1><a href="index.html" class="logo">KAMFLIX</a></h1>
+                </div>
+                <div class="menu-container">
+                    <ul class="menu-list" id="menu-list">
+                        <li class="menu-list-item active"><a href="index.html" class="activo"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li class="menu-list-item active"><a href="Peliculas.html"><i class="fa-duotone fa-solid fa-film" style="--fa-primary-color: #ffffff; --fa-secondary-color: #e8e8e8;"></i> Peliculas</a></li>
+                        <li class="menu-list-item active"><a href="Series.html"><i class="fa-solid fa-clapperboard" style="color: #ffffff;"></i> Series</a></li>
+                        <li class="menu-list-item active"><a href="MiLista.html"><i class="fa-solid fa-bookmark" style="color: #ffffff;"></i> Mi Lista</a></li>
+                    </ul>
+                </div>
+                <div class="barra-busqueda">
+                    <input type="text" id="search-input" placeholder="Buscar películas...">
+                    <div class="resultado-busqueda" id="resultado-busqueda">
+                        <!--aqui estara el contenido del resultado-->
+                    </div>
+                </div>
+                <div class="profile-container">
+                    <img class="profile-picture" src="https://github.com/andreyssong/Prueba-final/blob/main/imagenes/Profile-PNG.png?raw=true" alt="">
+                    <div class="profile-text-container">
+                        <span class="profile-text">Cuenta</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</header>
+    <main class="main-content">
+        <div id="carrusel-item" class="carrusel">
+            <div class="carrusel-content">
+                <h2 id="carrusel-title"></h2>
+                <p id="carrusel-rating"></p>
+                <div class="carrusel-buttons">
+                    <button class="btn">✚ Ver Más</button>
+                    <button class="btn">★ Agregar a Favoritos</button>
+                </div>
+            </div>
+        </div>
+        <section class="titulo-pd">
+            <h3>CONTENIDO DESTACADO</h3>
+        </section>
+        <div class="grid-container" id="movie-grid" data-id="">
+            <!-- Las imágenes de las películas se agregarán aquí dinámicamente -->
+        </div>
+        <!-- Grid item -->
+    </main><br><br>
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="seccion-footer">
+                <p><a href="#">Centro de ayuda</a></p>
+                <p><a href="#">Empleo</a></p>
+                <p><a href="#">Preferencias de cookies</a></p>
+            </div>
+    
+            <div class="seccion-footer">
+                <p><a href="#">Trajetas de regalo</a></p>
+                <p><a href="#">Términos de uso</a></p>
+                <p><a href="#">Información corporativa</a></p>
+            </div>
+    
+            <div class="seccion-footer">
+                <p><a href="#">Prensa</a></p>
+                <p><a href="#">Privacidad</a></p>
+                <p><a href="#">contáctanos</a></p>
+            </div>
+        </div><br><br>
+        <div class="info-final">
+            <h3>
+                Proyecto de clase. Curso Programación Básica. Talento Tech.
+            </h3>
+        </div>
+    </footer>
+<script src="script/script.js" defer></script>
+</body>
+</html>
