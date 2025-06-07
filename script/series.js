@@ -5,7 +5,7 @@ const busquedaInput = document.getElementById('busqueda-input');
 
 async function fetchSeries() {
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=es-MX&page=1`);
+        const response = await fetch(`https://api.themoviedb.org/3/tv/airing-today?api_key=${apiKey}&language=es-MX&page=1`);
         const data = await response.json();
         displaySeries(data.results); // Muestra las series obtenidas
     } catch (error) {
